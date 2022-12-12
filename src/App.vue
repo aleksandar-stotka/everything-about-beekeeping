@@ -2,9 +2,9 @@
   <v-app style="background-color: lightgrey;">
     <Nav/>
   
-   <v-content>
+   <v-main>
     <router-view></router-view>
-   </v-content>
+   </v-main>
   </v-app>
 </template>
 

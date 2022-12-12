@@ -27,6 +27,8 @@
           <v-form class="px-3">
             <v-text-field label="Title"  v-model="title"></v-text-field>
             <v-textarea label="Information" v-model="content"></v-textarea>
+              <input required type="date" v-model="formatDate"/>
+             
              <v-btn @click="submit" class="success mx-3" text>Add Project</v-btn>
           </v-form> 
         </v-card-text>
@@ -44,22 +46,32 @@
           </v-btn>
         </v-card-actions>
       </v-card>
+      <v-row justify="center">
+   
+  </v-row>
     </v-dialog>
   </div>
 </template>
 
 <script>
+import format from "date-fns/format"
 export default {
   data() {
     return {
       dialog: false,
       title: "",
-      content:''
+      content:'',
+      due:null
     }
   },
   methods: {
     submit() {
       console.log(this.title,this.content)
+    }
+  },
+  computed: {
+    formatDate() {
+      return this.due ? format(this.due, 'Do MM YYYY ') : ""
     }
   }
 

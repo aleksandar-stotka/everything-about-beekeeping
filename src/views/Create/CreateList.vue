@@ -7,7 +7,7 @@
 
             <v-layout row wrap>
                 <v-flex xs12 sm6 md4 lg3 v-for="prod in projects" :key="prod.text">
-                    <v-card flat class="text-center ma-3">
+                    <v-card text class="text-center ma-3">
                         <v-responsive class="pt-4">
                             <v-avatar size="100">
                                 <img :src="prod.avatar" />
@@ -17,9 +17,9 @@
                             <div class="subheading">{{prod.title}}</div>
                             <div class="grey--text">{{prod.person}}</div>
                         </v-card-text>
-                        <v-card-action>
-                            <v-btn block text smalls color="grey" flat>add</v-btn>
-                        </v-card-action>
+                      
+                            <v-btn block text smalls color="grey" >add</v-btn>
+                       
 
                     </v-card>
 

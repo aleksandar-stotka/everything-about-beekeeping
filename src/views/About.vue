@@ -3,7 +3,7 @@
     <v-container class="my-5">
       <v-layout row wrap>
         <v-flex xs12 md6>
-          <v-btn outline block color="indigo">1</v-btn>
+          <v-btn outlined block color="indigo">1</v-btn>
 
         </v-flex>
         <v-flex xs4 md2>
@@ -15,7 +15,7 @@
 
         </v-flex>
         <v-flex xs4 md2>
-          <v-btn outline block class="primary">1</v-btn>
+          <v-btn outlined block class="primary">1</v-btn>
 
         </v-flex>
 
