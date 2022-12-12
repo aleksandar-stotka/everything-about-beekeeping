@@ -1,5 +1,5 @@
 <template>
-  <v-app class="grey lighten-4">
+  <v-app style="background-color: lightgrey;">
     <Nav/>
   
    <v-content>

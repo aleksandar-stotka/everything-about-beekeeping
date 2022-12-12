@@ -21,6 +21,7 @@
         <v-list-item
           v-for="(item, i) in items"
           :key="i"
+          router :to="item.route"
         >
           <v-list-item-icon>
             <v-icon v-text="item.icon"></v-icon>
@@ -42,23 +43,28 @@
 export default {
   data() {
     return {
-      drawer: null,
+      drawer: false,
       items: [
         {
-          icon: 'mdi-inbox',
-          text: 'Inbox',
+          icon: 'mdi-home',
+          text: 'Home',
+          route:'/'
         },
         {
-          icon: 'mdi-star',
-          text: 'Star',
+          icon: 'mid-about'
+,
+          text: 'About',
+          route:'/about'
         },
         {
           icon: 'mdi-send',
-          text: 'Send',
+          text: 'products',
+          route:'/products'
         },
         {
           icon: 'mdi-email-open',
           text: 'Drafts',
+          route:'/Create'
         },
       ],
       model: 1,
