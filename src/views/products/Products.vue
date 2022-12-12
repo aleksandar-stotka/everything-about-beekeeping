@@ -30,6 +30,26 @@
 
         </v-card>
 
+    
+  <v-expansion-panels class="my-5">
+    <v-expansion-panel
+    
+    >
+      <v-expansion-panel-header>Item</v-expansion-panel-header>
+      <v-expansion-panel-content v-for="prod in myProjects" :key="prod.title">
+        <div slot="header">{{prod.title}}</div>
+        <v-card flat>
+            <v-card-text class="px-4 grey--text">
+                <div>{{prod.person}}</div>
+
+            </v-card-text>
+        </v-card>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+  </v-expansion-panels>
+
+      
+
     </v-container>
 
   </div>
@@ -46,8 +66,14 @@ export default {
 
             ]
         }
-    }
-
+    },
+     computed: {
+            myProjects() {
+                return this.projects.filter(prod => {
+                    return prod.person === "Net ace"
+                })
+            }
+     }
 }
 </script>
 
